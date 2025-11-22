@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    margin:50px 0;
+
+    background: linear-gradient(132deg, #000000,#00ff00, #0000ff,#e60073,#ff0000,#ffffff);
+    background-size: 400% 400%;
+    animation: BackgroundGradient 15s ease infinite;
+}
+
+@keyframes BackgroundGradient {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+
+.container-register {
+    
+    padding: 30px;
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background-color: rgba(255, 255, 255, 0.287);
+
+    div {
+        h1 {
+            font-size: 34px;
+        }
+        p {
+            margin:10px 0 30px 0;
+            font-size: 16px;
+            color:#343232;
+        }
+    }
+}
+
+.container-register form {
+    div {
+
+        margin-bottom: 15px;  
+        position: relative;
+
+        label {
+            display: block;
+            position: absolute;
+            z-index: 2;
+            top:50%;
+            left:16px;
+            transform: translateY(-50%);
+            font-size: 14px;
+            color:#616161;
+            transition: all 0.3s ease;
+        }
+
+        input {
+            width:100%;
+            padding:10px 14px;  
+            font-size: 14px;
+            border-radius: 6px;
+            border:1px solid #a7a7a7;
+            z-index: 1;
+            outline: none;
+        }
+
+        input:focus + label {
+            top:0;
+            left:10px;
+            font-size: 12px;
+            background-color: hsl(0, 0%, 100%);
+            padding:0 4px;
+            transform: translateY(-50%);
+            border-radius: 5px;
+        }
+
+        input:focus {
+            outline:none;
+            border:1px solid #16e8ef;
+        }
+    }
+
+    .btn-submit {
+        width:100%;
+        margin: 15px 0;
+        padding:10px 14px;
+        border:none;
+        background-color: #16e8ef;
+        color:#000000;
+        font-size: 16px;
+        border-radius: 6px;
+        text-decoration: none;
+        display: block;
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+        font-size: 14px;
+        color:#312e2e;
+
+        a {
+            color:#4ae9ef;
+        }
+    }
+}
+
+
+@media screen and (min-width:993px)  {
+    .container-register {
+        width: 500px;
+    }
+}
+
+@media screen and (min-width:576px) and (max-width:992px) {
+    .container-register {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width:575px) {
+    .container-register {
+        width: 350px;
+    }
+}
+
+
